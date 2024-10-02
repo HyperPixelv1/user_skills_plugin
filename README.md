@@ -2,6 +2,9 @@
 
 Bu eklenti, tamamlanan görevlerin üzerindeki etiketleri kullanıcılara yetenek olarak atar ve kullanıcı profillerinde gösterir. Örneğin, bir görev "Python" etiketiyle işaretlenmişse ve bir kullanıcı bu görevi tamamlarsa, profilinde "Python 5" olarak gösterilir. Buradaki "5", kullanıcının "Python" etiketi taşıyan toplam kaç görevi tamamladığını belirtir.
 
+## İhtiyaçlar
+- Additional ve Additional_tags pluginlerini eklemeniz gerekmekteidir. ```https://github.com/alphanodes/additional_tags```
+
 ## Özellikler
 
 - Görev tamamlandığında, görev etiketlerini otomatik olarak kullanıcının yeteneklerine ekler.
