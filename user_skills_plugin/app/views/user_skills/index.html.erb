@@ -1,0 +1,13 @@
+<h1><%= @user.name %>'in Yetenekleri</h1>
+
+<% if @user_skills.present? %>
+  <div class="user-skills">
+    <% @user_skills.each do |skill| %>
+      <div class="skill">
+        <p><strong><%= "#{skill.tag_name} ##{skill.task_count}" %></strong></p>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p>No skills available.</p>
+<% end %>
