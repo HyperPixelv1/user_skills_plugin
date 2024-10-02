@@ -16,4 +16,4 @@ Bu eklentiyi kurmak için şu adımları izleyin:
 1. **Bu depoyu ```/redmine/plugins``` klasorüne klonlayın:**
 
    ```sh
-   git clone https://github.com/yourusername/redmine_kullanici_yetenekleri_eklenti.git
+   https://github.com/HyperPixelv1/redmine-user_skill_plugin.git
