@@ -1,8 +1,11 @@
 class UserSkillsController < ApplicationController
   before_action :find_issue, only: [:update_skills]
+  before_action :authorize_only, only: [:tagged_issue]
+  before_action :require_login, only: [:tagged_issue]
+  before_action :set_cache_headers, only: [:tagged_issue]
 
   def update_skills(issue)
-    return unless issue && issue.status.name.casecmp("done").zero?
+    return unless issue && (issue.status.name.casecmp("done").zero? && issue.spent_hours >= 0.5)
 
     tags = issue.tag_list.to_a  # Burada tag_list'i diziye çeviriyoruz
     user = issue.assigned_to
@@ -29,11 +32,6 @@ class UserSkillsController < ApplicationController
     else
       Rails.logger.info "No skills available for User ID: #{@user.id}."
     end
-  end
-
-  def show
-    @user = User.find(params[:id])
-    @user_skills = UserSkill.where(user: @user)
   end
 
   private

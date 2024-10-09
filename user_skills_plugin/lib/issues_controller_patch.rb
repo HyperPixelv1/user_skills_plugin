@@ -10,7 +10,7 @@ module IssuesControllerPatch
   private
 
   def call_user_skills_update
-    return unless @issue.saved_change_to_status_id? && @issue.status.name&.casecmp("done")&.zero?
+    return unless @issue.saved_change_to_status_id? && (@issue.status.name&.casecmp("done")&.zero? && @issue.spent_hours >= 0.5)
 
     # Kullanıcı yeteneklerini güncelleyen controller'ı çağır
     UserSkillsController.new.update_skills(@issue)

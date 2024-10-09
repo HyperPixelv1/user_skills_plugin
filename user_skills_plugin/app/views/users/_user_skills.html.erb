@@ -1,13 +1,24 @@
-<%= stylesheet_link_tag 'user_skills', plugin: :user_skills_plugin %>
-
 <div class="user-skills">
   <% if skills.present? %>
     <h3>Yetenekler</h3>
     <div class="skills-container">
       <% skills.each do |skill| %>
         <div class="skill-badge">
-          <span class="skill-name"><%= skill.tag_name %></span>
-          <span class="skill-count"><%= skill.task_count %></span>
+          <span class="skill-name">
+            <%= link_to skill.tag_name, issues_path(
+              utf8: "✓",
+              set_filter: "1",
+              sort: "id:desc",
+              f: ['status_id', 'assigned_to_id', 'tags'],
+              "op[status_id]" => "=",
+              "v[status_id][]" => IssueStatus.find_by(name: "Done").id,  
+              "op[assigned_to_id]" => "=",
+              "v[assigned_to_id][]" => user.id, 
+              "op[tags]" => "=",
+              "v[tags][]" => skill.tag_name
+            ), class: "tag-link" %>
+          </span>
+          <span class="skill-count"> <%= skill.task_count %></span>
         </div>
       <% end %>
     </div>

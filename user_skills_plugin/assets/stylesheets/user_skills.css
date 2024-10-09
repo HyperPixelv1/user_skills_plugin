@@ -1,35 +1,21 @@
 .user-skills {
-    margin-top: 20px;
-  }
-  
-  .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .skill-badge {
-    display: inline-flex;
-    align-items: center;
-    border-radius: 20px;
-    overflow: hidden;
-    font-size: 14px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .skill-name {
-    background-color: #E30A17;  /* Mavi arka plan */
-    color: white;
-    padding: 5px 10px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-  }
-  
-  .skill-count {
-    background-color: #f0f0f0;  /* Açık gri arka plan */
-    padding: 5px 10px;
-    color: #333;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-skills a {
+  color: #fff; /* Link text color */
+  background-color: #f80606; /* Background color for links */
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none !important;
+  display: inline-block;
+  margin: 5px;
+  font-size: 14px; /* Adjust font size */
+}
+
+.user-skills .skill-count {
+  color: #333; /* Task count text color */
+  font-size: 0.9em;
+  margin-left: 8px; /* Space between link and task count */
+}
