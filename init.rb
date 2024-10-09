@@ -14,6 +14,5 @@ Redmine::Plugin.register :user_skills_plugin do
   author "HyperPixelv1"
   description "This plugin assigns the tags of the issues assigned to the user to the user's profile as the user's ability when the issue is done. When the buttons that ability tag in the user's profile are clicked, it shows the finished issues assigned to the user for that tag."
   version "0.0.1"
-  url "http://example.com/path/to/plugin"
   author_url "https://github.com/HyperPixelv1"
 end
