@@ -1,3 +1,0 @@
-= user_skills_plugin
-
-Description goes here
