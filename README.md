@@ -9,8 +9,7 @@ Bu eklenti, tamamlanan görevlerin üzerindeki etiketleri kullanıcılara yetene
 
 - Görev tamamlandığında, görev etiketlerini otomatik olarak kullanıcının yeteneklerine ekler.
 - Her bir yeteneği ve o yetenekle tamamlanmış görev sayısını kullanıcının profilinde gösterir.
-## Eklenecek Özellikler
-- Ayrıntılı yetenek özetini içeren özel bir yetenek sayfası sağlar.
+- Kullanıcı profilindeki yetenek tagine tıklanıldığı zaman o kullanıcının o tagde durumu 'Done' olan görevlerini listeler.
 
 ## Kurulum
 
