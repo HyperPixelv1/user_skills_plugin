@@ -1,10 +1,16 @@
-<div class="user-skills">
+<div class="user-skills" style="display: flex; flex-wrap: wrap; gap: 8px;">
   <% if skills.present? %>
     <h3>Yetenekler</h3>
-    <div class="skills-container">
-      <% skills.each do |skill| %>
-        <div class="skill-badge">
-          <span class="skill-name">
+    <div class="skills-container" style="display: flex; flex-wrap: wrap; gap: 8px;">
+      <% skills.each_with_index do |skill, index| %>
+        <% # Her etiket için farklı renk seçenekleri %>
+        <% colors = ["#4caf50", "#03a9f4", "#ff5722", "#9c27b0", "#607d8b", "#ffeb3b", "#795548", "#00bcd4", "#cddc39", "#673ab7", "#f44336", "#2196f3"] %>
+        <% color = colors[index % colors.length] || "#888888" %>
+        <% skill_background_style = "background-color: #{color}; border: 1px solid #{color}; color: #fff;" %>
+        <% skill_count_style = "background-color: #fff; color: #{color}; border: 1px solid #{color};" %>
+        
+        <div class="skill-badge" style="display: inline-flex; align-items: center; border-radius: 15px; padding: 4px 10px; margin: 2px; <%= skill_background_style %>">
+          <span class="skill-name" style="margin-right: 6px;">
             <%= link_to skill.tag_name, issues_path(
               utf8: "✓",
               set_filter: "1",
@@ -16,9 +22,9 @@
               "v[assigned_to_id][]" => user.id, 
               "op[tags]" => "=",
               "v[tags][]" => skill.tag_name
-            ), class: "tag-link" %>
+            ), class: "tag-link", style: "text-decoration: none; font-weight: 500; font-size: 13px; color: #fff;" %>
           </span>
-          <span class="skill-count"> <%= skill.task_count %></span>
+          <span class="skill-count" style="<%= skill_count_style %> padding: 2px 6px; font-size: 12px; font-weight: bold; display: inline-flex; align-items: center; justify-content: center; min-width: 20px; text-align: center;"><%= skill.task_count %></span>
         </div>
       <% end %>
     </div>
