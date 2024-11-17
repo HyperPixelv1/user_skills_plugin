@@ -1,0 +1,59 @@
+.user-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%; /* Kapsayıcı genişliğini tam satır yapar */
+  margin-top: 10px; /* Başlık ve etiketler arasına boşluk ekler */
+  margin-left: 0;
+}
+
+.skills-container {
+  width: 100%; /* Etiketlerin alt satırda görünmesini sağlar */
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 15px;
+  padding: 4px 10px;
+  margin: 2px;
+  color: #fff; /* Varsayılan yazı rengi */
+}
+
+.skill-name a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+  color: inherit; /* Bağlantının yazı rengini dış kapsayıcıdan alması */
+  margin-right: 6px;
+}
+
+.skill-count {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  text-align: center;
+  border: 1px solid; /* Varsayılan olarak border-color'ı dışarıdan alır */
+  color: #333
+}
+
+/* Örnek olarak, her renk için ayrı sınıflar */
+.color-green { background-color: #4caf50; border-color: #4caf50; }
+.color-blue { background-color: #03a9f4; border-color: #03a9f4; }
+.color-orange { background-color: #ff5722; border-color: #ff5722; }
+.color-purple { background-color: #9c27b0; border-color: #9c27b0; }
+.color-grey { background-color: #607d8b; border-color: #607d8b; }
+.color-yellow { background-color: #ffeb3b; border-color: #ffeb3b; color: #333; }
+.color-brown { background-color: #795548; border-color: #795548; }
+.color-cyan { background-color: #00bcd4; border-color: #00bcd4; }
+.color-lime { background-color: #cddc39; border-color: #cddc39; color: #333; }
+.color-deep-purple { background-color: #673ab7; border-color: #673ab7; }
+.color-red { background-color: #f44336; border-color: #f44336; }
+.color-indigo { background-color: #2196f3; border-color: #2196f3; }
+.color-default { background-color: #888888; border-color: #888888; }
